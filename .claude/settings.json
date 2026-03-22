@@ -1,10 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "Bash(powershell.exe -Command \"Get-NetTCPConnection -LocalPort 3000 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess\")",
-      "Bash(powershell.exe -Command \"Stop-Process -Id 37496 -Force\")",
-      "Bash(grep -r \"FloatingContact\\\\|ChatWidget\" '/c/Users/ROHIT/Desktop/max engg/app' --include=*.tsx --include=*.jsx)",
-      "Bash(curl -s -X POST \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDt89AbhTE7UXiaHP32tvMvzDGIia8FPTk\" -H \"Content-Type: application/json\" -d '{\"\"\"\"contents\"\"\"\":[{\"\"\"\"parts\"\"\"\":[{\"\"\"\"text\"\"\"\":\"\"\"\"Hello\"\"\"\"}]}]}')",
       "Bash(git config:*)",
       "Bash(npx next:*)"
     ]
