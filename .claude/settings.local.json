@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser)",
+      "Bash(powershell.exe -Command \"Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force\")",
+      "Bash(npm run:*)",
+      "Bash(openssl rand:*)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /PID 17916 /F)",
+      "Bash(powershell.exe -Command \"Stop-Process -Id 17916 -Force\")",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ── Global smooth transitions ── */
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a, button {
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s,
+              opacity 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+/* ── Link hover: subtle opacity shift ── */
+a:not([class]):hover {
+  opacity: 0.75;
+}
+
+/* ── Cards: lift on hover ── */
+.card-hover {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(7, 28, 54, 0.12);
+}
+
+/* ── Images: subtle zoom on hover ── */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ── Buttons: lift effect ── */
+.btn-lift {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(7, 28, 54, 0.15);
+}
+.btn-lift:active {
+  transform: translateY(0);
+}
+
+/* ── Nav underline slide ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Page fade-in ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ── Focus ring ── */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.bg-industrial-hero {
+  background-image: linear-gradient(rgba(11, 31, 58, 0.8), rgba(0, 6, 21, 0.95)),
+    url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzwvQ7cDGejjXwrEp1OfhXSdiAVCv_JJ6WvfnUJNDZbEsSwqGDbwa0VXE2nY1nuFsju1jKOEVCma9qwESZfP9KlcCnYhpQOnzXImJ-3ZTRAoVU1ZPnu0MuMZiyECcZsTpzXHiaZG0cZuagKYgKi6wXeHuZ9yRS4IDyflZ9yluGjQUGSVlMUOTFCrHTxHMprGcyEpSTj7pRIrH_xhn6PTXUdkk2s95cvWyPaarqELShPbzG3PPw29SwZe7uL0gNRGFXNSDcgSJwNlVi');
+  background-size: cover;
+  background-position: center;
+}
+
+.machined-gradient {
+  background: linear-gradient(135deg, #000615 0%, #0b1f3a 100%);
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+}
