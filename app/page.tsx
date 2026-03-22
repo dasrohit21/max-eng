@@ -9,12 +9,12 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-industrial-hero min-h-[870px] flex items-center justify-center text-center px-4 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto py-20 relative z-10 fade-up">
+      <section className="bg-industrial-hero min-h-[600px] sm:min-h-[870px] flex items-center justify-center text-center px-4 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto py-12 sm:py-20 relative z-10 fade-up">
           <span className="text-secondary-container font-headline font-bold tracking-[0.2em] uppercase text-sm mb-6 block">
             Industrial Excellence
           </span>
-          <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight mb-8 tracking-tighter">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight mb-6 sm:mb-8 tracking-tighter">
             Reliable Electrical &amp; <br />
             <span className="text-secondary-container">Instrumentation</span> Excellence
           </h1>
@@ -54,8 +54,8 @@ export default function HomePage() {
       </section>
 
       {/* About Preview */}
-      <section className="py-24 px-8 bg-surface">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-4 bg-secondary-container/10 rounded-xl transform -rotate-3 transition-transform group-hover:rotate-0" />
             <img
@@ -65,7 +65,7 @@ export default function HomePage() {
             />
           </div>
           <div className="lg:col-span-7">
-            <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-primary-container mb-8 leading-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-headline font-extrabold text-primary-container mb-6 sm:mb-8 leading-tight">
               Engineering Excellence <br />Through Precision
             </h2>
             <div className="space-y-6 text-on-surface-variant text-lg">
@@ -91,7 +91,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface-container-low">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl">
@@ -152,8 +152,8 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 px-8 bg-surface">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           <div className="w-full lg:w-1/2">
             <span className="text-secondary-container font-headline font-bold text-sm tracking-widest block mb-4 uppercase">
               Reliability First
@@ -217,7 +217,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-8 bg-primary-container relative overflow-hidden">
+      <section className="py-12 sm:py-20 px-4 sm:px-8 bg-primary-container relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary-container/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-headline font-extrabold text-white mb-6">

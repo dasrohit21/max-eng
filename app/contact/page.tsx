@@ -54,12 +54,12 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-20 pb-16 px-8 bg-surface-container">
+      <section className="relative pt-12 sm:pt-20 pb-12 sm:pb-16 px-4 sm:px-8 bg-surface-container">
         <div className="max-w-7xl mx-auto">
           <span className="uppercase tracking-widest text-secondary font-bold text-xs">
             Project Inquiry
           </span>
-          <h1 className="text-6xl md:text-8xl font-black font-headline text-primary-container mt-4 mb-8 tracking-tighter leading-none">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-headline text-primary-container mt-4 mb-6 sm:mb-8 tracking-tighter leading-none">
             Contact Us
           </h1>
           <p className="max-w-2xl text-lg text-on-surface-variant leading-relaxed">
@@ -70,11 +70,11 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="px-8 -mt-12 mb-24">
+      <section className="px-4 sm:px-8 -mt-12 mb-12 sm:mb-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Contact Details */}
           <div className="lg:col-span-4 space-y-8 pt-12">
-            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_rgba(7,28,54,0.08)] border-l-4 border-secondary-container">
+            <div className="bg-surface-container-lowest p-5 sm:p-8 rounded-xl shadow-[0_12px_32px_rgba(7,28,54,0.08)] border-l-4 border-secondary-container">
               <div className="flex items-start gap-4 mb-8">
                 <span className="material-symbols-outlined text-secondary text-3xl">location_on</span>
                 <div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
             </div>
 
             {/* Meta Card */}
-            <div className="bg-primary-container p-8 rounded-xl text-white">
+            <div className="bg-primary-container p-5 sm:p-8 rounded-xl text-white">
               <span className="text-[10px] uppercase tracking-[0.2em] opacity-60 block mb-4">
                 ESTABLISHED 2005 · WWW.MAXENGGJSR.IN
               </span>
@@ -209,7 +209,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="w-full h-[500px] bg-surface-container-highest relative overflow-hidden group">
+      <section className="w-full h-[300px] sm:h-[500px] bg-surface-container-highest relative overflow-hidden group">
         <div className="absolute inset-0 bg-primary-container/10 z-10 pointer-events-none group-hover:bg-primary-container/0 transition-colors duration-500" />
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuByI4y77kkE2l0rKFMzqiACnZU_2LVJHsNiZQXXl3-clOEUa_vd4XfUS8z3q_4RRkr2sh4bz62QsVgO_gWNXYGrjn3E1JQWSdtBlf-WtTFmpcWBHM3_92A8R-tFxDoN1yA2F0YPb9yJArq2Y8y_IbnihAMPTH5F5wvU3KgEKnqptOtugFHrv2W3u-ZfnyPvrrK9xfqL2Prk3SGsfRiFMBpULPH_yl7vu2fZEu81lSv_lL6F-Ambh2s9Po5Z3q4dtBoRJQCpbiYmxo-i"

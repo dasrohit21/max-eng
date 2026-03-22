@@ -33,7 +33,7 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-primary-container px-8 pt-8 pb-6 relative">
+        <div className="bg-primary-container px-5 sm:px-8 pt-6 sm:pt-8 pb-5 sm:pb-6 relative">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
@@ -57,7 +57,7 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
         </div>
 
         {/* Body */}
-        <div className="px-8 py-6 space-y-5">
+        <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-5">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-2">Scope of Work</p>
             <p className="text-on-surface-variant leading-relaxed">{project.work}</p>
@@ -110,18 +110,18 @@ export default function ProjectsPage() {
       {selected && <Modal project={selected} onClose={() => setSelected(null)} />}
 
       {/* Page Header */}
-      <header className="relative overflow-hidden bg-primary-container py-24 px-8">
+      <header className="relative overflow-hidden bg-primary-container py-12 sm:py-24 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 rounded-sm text-xs font-bold tracking-widest uppercase mb-6 fade-up">
             Portfolio
           </div>
-          <h1 className="text-white font-headline text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
+          <h1 className="text-white font-headline text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-6 sm:mb-8 leading-none">
             Our <span className="text-secondary-container">Work</span>
           </h1>
           <p className="text-on-primary-container max-w-2xl text-lg leading-relaxed">
             A legacy of precision and technical excellence — 19+ reputed clients across India including Tata Steel, SMC Power Generation, KIC Metaliks and more.
           </p>
-          <div className="flex gap-8 mt-10">
+          <div className="flex flex-wrap gap-6 sm:gap-8 mt-8 sm:mt-10">
             <div>
               <p className="text-3xl font-headline font-black text-secondary-container">19+</p>
               <p className="text-on-primary-container text-xs uppercase tracking-widest font-bold">Major Clients</p>
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
       </header>
 
       {/* Filter & Grid */}
-      <section className="py-20 px-8 bg-surface">
+      <section className="py-12 sm:py-20 px-4 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center gap-4 mb-12">
             {filters.map((f) => (
@@ -201,7 +201,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-8 bg-surface-container text-center">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface-container text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-headline text-4xl font-black text-primary-container mb-6 tracking-tight">
             Start Your Engineering Journey

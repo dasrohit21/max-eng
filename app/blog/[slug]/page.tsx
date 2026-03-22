@@ -79,7 +79,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       )}
 
       {/* Article */}
-      <article className="py-16 px-8 bg-surface">
+      <article className="py-10 sm:py-16 px-4 sm:px-8 bg-surface">
         <div className="max-w-3xl mx-auto">
           {/* Back */}
           <Link href="/blog" className="inline-flex items-center gap-1 text-secondary text-sm font-bold mb-8 hover:opacity-75 transition-opacity">
@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </p>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-headline font-extrabold text-primary-container tracking-tight leading-tight mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-headline font-extrabold text-primary-container tracking-tight leading-tight mb-6">
             {post.title}
           </h1>
 

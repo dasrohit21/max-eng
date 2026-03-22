@@ -25,11 +25,11 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 w-full z-50 glass-header shadow-[0_12px_32px_rgba(7,28,54,0.08)]">
-      <div className="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+      <div className="flex justify-between items-center h-16 sm:h-20 px-4 sm:px-8 max-w-7xl mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Max Engineering Logo" className="h-12 w-12 rounded-full object-cover" />
-          <span className="text-2xl font-black text-on-surface font-headline tracking-tight">Max Engineering</span>
+        <Link href="/" className="flex items-center gap-2 sm:gap-3">
+          <img src="/logo.png" alt="Max Engineering Logo" className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover" />
+          <span className="text-lg sm:text-2xl font-black text-on-surface font-headline tracking-tight">Max Engineering</span>
         </Link>
 
         {/* Desktop Links */}
@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-surface-container-lowest border-t border-outline-variant px-8 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-surface-container-lowest border-t border-outline-variant px-4 sm:px-8 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <Link
               key={link.href}

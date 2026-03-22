@@ -41,12 +41,12 @@ export default function GalleryPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative py-24 px-8 overflow-hidden machined-gradient">
+      <section className="relative py-12 sm:py-24 px-4 sm:px-8 overflow-hidden machined-gradient">
         <div className="relative z-10 max-w-7xl mx-auto">
           <span className="text-secondary-container font-label uppercase tracking-[0.2em] text-sm font-bold block mb-4 fade-up">
             Excellence in Execution
           </span>
-          <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter leading-tight">
             Project Gallery
           </h1>
           <p className="mt-6 text-slate-400 text-lg md:text-xl font-body leading-relaxed max-w-xl">
@@ -60,7 +60,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Masonry Grid */}
-      <section className="py-16 px-8 bg-surface">
+      <section className="py-8 sm:py-16 px-3 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
           <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
             {galleryImages.map((src, i) => (
@@ -123,7 +123,7 @@ export default function GalleryPage() {
       )}
 
       {/* CTA */}
-      <section className="py-24 px-8 bg-surface-container">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface-container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-headline font-extrabold text-primary tracking-tight mb-6">
             Need a quote for your next major project?

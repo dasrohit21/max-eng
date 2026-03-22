@@ -123,7 +123,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     <>
       <Navbar />
 
-      <main className="pt-8 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <main className="pt-6 sm:pt-8 pb-12 sm:pb-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         {/* Breadcrumbs */}
         <nav className="flex items-center space-x-2 text-xs font-label uppercase tracking-widest text-on-surface-variant mb-8">
           <Link href="/" className="hover:text-secondary transition-colors">Home</Link>
@@ -138,12 +138,12 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <p className="text-secondary font-headline font-extrabold tracking-tighter text-sm uppercase mb-2">
             Project Case Study
           </p>
-          <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-primary-container tracking-tight leading-tight max-w-4xl">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-headline font-extrabold text-primary-container tracking-tight leading-tight max-w-4xl">
             {project.title}
           </h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Main Content */}
           <div className="lg:col-span-8 space-y-12">
             {/* Large Project Image */}
@@ -168,8 +168,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </section>
 
             {/* Challenges & Solutions */}
-            <section className="bg-surface-container-low rounded-xl p-8 md:p-12 space-y-8">
-              <div className="grid md:grid-cols-2 gap-12">
+            <section className="bg-surface-container-low rounded-xl p-5 sm:p-8 md:p-12 space-y-8">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div className="space-y-4">
                   <h3 className="text-xl font-headline font-bold text-primary-container flex items-center gap-2">
                     <span className="material-symbols-outlined text-error">warning</span>
@@ -222,7 +222,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           {/* Sidebar */}
           <aside className="lg:col-span-4">
             <div className="sticky top-28 space-y-8">
-              <div className="machined-gradient rounded-xl p-8 text-white shadow-2xl relative overflow-hidden">
+              <div className="machined-gradient rounded-xl p-5 sm:p-8 text-white shadow-2xl relative overflow-hidden">
                 <div
                   className="absolute inset-0 opacity-5 pointer-events-none"
                   style={{
@@ -281,7 +281,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
 
         {/* Related Projects */}
-        <section className="mt-24 pt-16 border-t border-surface-container-high">
+        <section className="mt-12 sm:mt-24 pt-10 sm:pt-16 border-t border-surface-container-high">
           <h2 className="text-3xl font-headline font-extrabold text-primary-container mb-10 tracking-tight">
             More Engineering Marvels
           </h2>

@@ -26,7 +26,7 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Page Header */}
-      <section className="relative h-[409px] flex items-center bg-primary-container overflow-hidden">
+      <section className="relative min-h-[280px] sm:min-h-[409px] flex items-center bg-primary-container overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOa9wlRyRlFxbYDQ1hDQv7lieSlpXXB0I3yAoaP0oiIitDxx5gkiax4UxtvEJ_BtO1CciDqcP8Vgf9rplnTqQREMgQmVgfCqZranTd4pAjmta71uNPG16BI12ZhWvVOwLBOsu3t8PYr38veYnSTXOLqsWsVxurxJsYRG3GNyVt3UGu93PwpGgiHRVpfJZ2HTZepHB2FqEbxZGjMxHUDeI5SNBao3UFJ_iCLjcmJHZe5F4Csit7QnuvyBAiNyeRAgZeRt_qnl7TTav"
@@ -34,18 +34,18 @@ export default function ServicesPage() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative z-10 px-8 md:px-20 max-w-7xl fade-up">
+        <div className="relative z-10 px-4 sm:px-8 md:px-20 max-w-7xl fade-up">
           <span className="text-secondary-container font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
             PRECISE SOLUTIONS
           </span>
-          <h1 className="text-5xl md:text-7xl font-black text-white font-headline leading-tight tracking-tighter">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white font-headline leading-tight tracking-tighter">
             Our Services
           </h1>
         </div>
       </section>
 
       {/* Detailed Services */}
-      <section className="py-24 px-8 md:px-20 bg-surface">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 md:px-20 bg-surface">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service) => (
@@ -81,7 +81,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-8 md:px-20 bg-surface-container">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 md:px-20 bg-surface-container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-black font-headline text-primary-container mb-6">
             Get a Custom Quote Today

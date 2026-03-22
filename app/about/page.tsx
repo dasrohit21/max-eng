@@ -58,13 +58,13 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative py-24 px-8 overflow-hidden bg-surface-container">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <section className="relative py-12 sm:py-24 px-4 sm:px-8 overflow-hidden bg-surface-container">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 fade-up">
             <span className="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold tracking-widest mb-6 font-label">
               ESTABLISHED 2005
             </span>
-            <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-primary-container leading-tight mb-8">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-primary-container leading-tight mb-6 sm:mb-8">
               About Max Engineering
             </h1>
             <p className="text-lg text-on-surface-variant leading-relaxed max-w-xl">
@@ -76,17 +76,17 @@ export default function AboutPage() {
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPtKtCJnc7YOr-MeKz1VX9nbHLYI0SxGiCiGOJqSxiNuPvhMpU3Mm584nUiFVv3v18lrv9wxqAmie3tchh4C-l9UppwZZnjv1szvK5XoGe2hsXZeB5skXSanNwJaI5Xe7KRoYSzFWvI5aSpxsdeWxJAfl-PiBR220xR-9TV89IuPDIX-XyoE0E0PJcOdfUZFpAlZIuEe3pfMFKX13yxd52PmtxVcF8KTV8-dGa1E7BmMXzE5l2FU86SFdolAdtlud8dR2uFKTgKY7m"
               alt="Industrial Engineering"
-              className="rounded-xl shadow-2xl object-cover w-full h-[450px]"
+              className="rounded-xl shadow-2xl object-cover w-full h-[250px] sm:h-[350px] md:h-[450px]"
             />
           </div>
         </div>
       </section>
 
       {/* Overview & Founder */}
-      <section className="py-24 px-8 bg-surface">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="md:col-span-8 bg-surface-container-lowest p-12 rounded-xl shadow-sm border-l-8 border-primary-container">
+            <div className="md:col-span-8 bg-surface-container-lowest p-6 sm:p-12 rounded-xl shadow-sm border-l-8 border-primary-container">
               <h2 className="text-3xl font-headline font-bold text-primary-container mb-6 tracking-tight">
                 Instrumentation Solution for Industrial Excellence
               </h2>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                   We deliver Calibration, Erection & Commissioning for Process & Control Equipment across major industrial plants in India, trusted by leading steel, power, and mining corporations.
                 </p>
               </div>
-              <div className="mt-10 flex gap-12">
+              <div className="mt-10 flex flex-wrap gap-6 sm:gap-12">
                 <div>
                   <span className="block text-4xl font-headline font-black text-secondary">20+</span>
                   <span className="text-xs font-bold font-label uppercase tracking-tighter text-on-surface-variant">Years Experience</span>
@@ -134,9 +134,9 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface-container-low">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex-1 group">
               <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl machined-gradient text-secondary-container">
                 <span className="material-symbols-outlined text-4xl">rocket_launch</span>
@@ -162,9 +162,9 @@ export default function AboutPage() {
       </section>
 
       {/* Company Strength */}
-      <section className="py-24 px-8 bg-surface">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-headline font-extrabold text-primary-container mb-4">Company Strength</h2>
+          <h2 className="text-2xl sm:text-4xl font-headline font-extrabold text-primary-container mb-4">Company Strength</h2>
           <p className="text-on-surface-variant mb-12">Our core technical capabilities and expertise areas.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {strengths.map((s, i) => (
@@ -178,7 +178,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Experience */}
-      <section className="py-16 px-8 bg-primary-container">
+      <section className="py-12 sm:py-16 px-4 sm:px-8 bg-primary-container">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-headline font-extrabold text-white mb-4">Team Experience in Following Projects</h2>
           <div className="flex flex-wrap gap-3 mt-6">
@@ -192,9 +192,9 @@ export default function AboutPage() {
       </section>
 
       {/* Client List */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface-container-low">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-headline font-extrabold text-primary-container mb-4">Our Reputed Client List</h2>
+          <h2 className="text-2xl sm:text-4xl font-headline font-extrabold text-primary-container mb-4">Our Reputed Client List</h2>
           <p className="text-on-surface-variant mb-12">Trusted by leading industrial corporations across India.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {clients.map((client, i) => (
@@ -214,9 +214,9 @@ export default function AboutPage() {
       </section>
 
       {/* Organizational Structure */}
-      <section className="py-24 px-8 bg-surface">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-headline font-extrabold text-primary-container mb-12">Organizational Structure</h2>
+          <h2 className="text-2xl sm:text-4xl font-headline font-extrabold text-primary-container mb-8 sm:mb-12">Organizational Structure</h2>
           <div className="flex flex-col items-center gap-2">
             {[
               ['Proprietor'],
@@ -234,7 +234,7 @@ export default function AboutPage() {
                   {row.map((label) => (
                     <div
                       key={label}
-                      className="bg-green-600 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md flex-1 max-w-[200px] text-center"
+                      className="bg-green-600 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md flex-1 max-w-[160px] sm:max-w-[200px] text-center"
                     >
                       {label}
                     </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
       </section>
 
       {/* Safety Policy */}
-      <section className="py-16 px-8 bg-surface-container-low">
+      <section className="py-12 sm:py-16 px-4 sm:px-8 bg-surface-container-low">
         <div className="max-w-4xl mx-auto text-center">
           <span className="material-symbols-outlined text-secondary-container text-4xl mb-4 block">shield</span>
           <h2 className="text-3xl font-headline font-extrabold text-primary-container mb-6">Safety Policy</h2>

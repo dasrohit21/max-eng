@@ -36,12 +36,12 @@ export default async function BlogPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative py-24 px-8 machined-gradient">
+      <section className="relative py-12 sm:py-24 px-4 sm:px-8 machined-gradient">
         <div className="max-w-7xl mx-auto">
           <span className="text-secondary-container font-label uppercase tracking-[0.2em] text-sm font-bold block mb-4">
             News & Insights
           </span>
-          <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter leading-tight">
             Blog
           </h1>
           <p className="mt-6 text-slate-400 text-lg max-w-xl">
@@ -51,7 +51,7 @@ export default async function BlogPage() {
       </section>
 
       {/* Posts */}
-      <section className="py-20 px-8 bg-surface">
+      <section className="py-12 sm:py-20 px-4 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
           {posts.length === 0 ? (
             <div className="text-center py-24">

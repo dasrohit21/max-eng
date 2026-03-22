@@ -94,8 +94,8 @@ export default function ChatWidget() {
     <>
       {/* Chat Panel */}
       {open && (
-        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-3rem)] flex flex-col bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden"
-          style={{ height: '520px' }}
+        <div className="fixed bottom-24 right-3 sm:right-6 z-50 w-[calc(100vw-1.5rem)] sm:w-[360px] flex flex-col bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden"
+          style={{ height: 'min(520px, calc(100vh - 8rem))' }}
         >
           {/* Header */}
           <div className="bg-primary-container px-5 py-4 flex items-center justify-between flex-shrink-0">
@@ -210,7 +210,7 @@ export default function ChatWidget() {
       {/* Toggle Button */}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95"
         style={{ background: 'linear-gradient(135deg, #000615 0%, #0b1f3a 100%)' }}
         aria-label="Chat with us"
       >
