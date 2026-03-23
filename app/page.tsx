@@ -15,7 +15,7 @@ export default function HomePage() {
             Industrial Excellence
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight mb-6 sm:mb-8 tracking-tighter">
-            Reliable Electrical &amp; <br />
+            Reliable Electrical &amp; <br className="hidden sm:block" />
             <span className="text-secondary-container">Instrumentation</span> Excellence
           </h1>
           <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
@@ -25,13 +25,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-10 py-4 bg-secondary-container text-primary-container font-bold rounded-xl text-lg shadow-xl btn-lift"
+              className="w-full sm:w-auto px-6 sm:px-10 py-4 bg-secondary-container text-primary-container font-bold rounded-xl text-lg shadow-xl btn-lift"
             >
               Get Free Quote
             </Link>
             <a
               href="tel:9431755791"
-              className="w-full sm:w-auto px-10 py-4 bg-white/10 text-white backdrop-blur-md border border-white/20 font-bold rounded-xl text-lg hover:bg-white/20 transition-all text-center"
+              className="w-full sm:w-auto px-6 sm:px-10 py-4 bg-white/10 text-white backdrop-blur-md border border-white/20 font-bold rounded-xl text-lg hover:bg-white/20 transition-all text-center"
             >
               Call Now
             </a>
@@ -59,8 +59,8 @@ export default function HomePage() {
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-4 bg-secondary-container/10 rounded-xl transform -rotate-3 transition-transform group-hover:rotate-0" />
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVb13lPwi8jyagNpdXCPEVVdiGVtMviXPvsOQ61uS0J4Idkqz3jgtY1cUgSBdsV7O76aRsb04WkcPcxdYvLLh1O_WUJf2-E_mVQ94-Xi2gDTtlE_EZrHXG5nl1JzncozUaPH4sr9YqbsP_dCbrPi3ge8p38r35ZNI6x0ZDCrNf6s1wblqM0qGCqt08eg9LF-70KuskfQQFmLE7ZQdo7Rqw7-NUb3pBIzaBzcNgs-NvTqIs9Yvr3_EyyYbUjQovHENw4tavqfUcUEyn"
-              alt="Industrial electrical control panel"
+              src="/WhatsApp Image 2026-03-23 at 3.52.34 PM.jpeg"
+              alt="Max Engineering instrumentation panel"
               className="relative z-10 w-full aspect-square object-cover rounded-xl shadow-2xl"
             />
           </div>
@@ -196,8 +196,8 @@ export default function HomePage() {
           <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Lpwb3VZ0_dK8enWcfKFWwPlYv-7b8rjleTCuqK5xX_m1i5l_zUOjLnEI7KykwNMd9c4BN1nTVuO1GaPomPS7wnLdXc8XTGws7Pt7O1O527v1cJbAk9gmTW3UIcRErcgRppkmUegPNkGhfSVsex_jq7I9lZaYYKbzwaduMRn2MYGpfNBfMck5iykvp9oVH8quQVW-pWxQk-BoMhGthpdCt4ojAMEq__UObl4VDt82HsMLgs9ZTXUxIpx4wswF5SRAdbmObW6pnsbX"
-                alt="Electrician working on wiring"
+                src="/Gallery/1000112763.jpg"
+                alt="Max Engineering electrical work"
                 className="w-full rounded-xl object-cover"
               />
               <div className="flex flex-col gap-4">
@@ -206,8 +206,8 @@ export default function HomePage() {
                   <p className="font-bold uppercase text-xs">Emergency Support</p>
                 </div>
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB03Hx8jxMYl6-7R5GAgrWD8GFeFnYOfaqNxWxaHMLmpvH6ETi_2xpOWujqUkviKcSou53IAD2FzFoVEsDYmbzLwHeyDdP3DW5yZcEnVJSGV2JDIHr3ki6WrDODconzg-yCjPoZRsf0V3xsTJZqbxsc5kVC8z4Qu6ipQdb6li_E7S6VV61AV4ofRkdg73uOGKsfUoMfwQ6V1ahqYugkREaHnqAZyBLXKmzgQAMLQwN0-r7Nehk_RlLbONHaDpHWzOcv94FIIFoJJXX"
-                  alt="Instrumentation cluster"
+                  src="/Gallery/1000131296.jpg"
+                  alt="Max Engineering site installation"
                   className="w-full rounded-xl object-cover"
                 />
               </div>
@@ -229,13 +229,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="tel:9431755791"
-              className="bg-secondary-container text-primary-container px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-all"
+              className="w-full sm:w-auto bg-secondary-container text-primary-container px-6 sm:px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-all"
             >
               <span className="material-symbols-outlined">call</span> Call Now
             </a>
             <a
               href="https://wa.me/919431755791"
-              className="bg-white/10 text-white backdrop-blur-md border border-white/20 px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/20 transition-all"
+              className="w-full sm:w-auto bg-white/10 text-white backdrop-blur-md border border-white/20 px-6 sm:px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/20 transition-all"
             >
               <span className="material-symbols-outlined">chat</span> WhatsApp
             </a>

@@ -4,21 +4,24 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingContact from '@/components/FloatingContact'
 import pool from '@/lib/db'
+import { staticPosts } from '@/lib/blog-data'
 
 async function getPost(slug: string) {
+  // Try database first
   try {
     const result = await pool.query(
       'SELECT * FROM posts WHERE slug = $1 AND published = true',
       [slug]
     )
-    return result.rows[0] ?? null
+    if (result.rows[0]) return result.rows[0]
   } catch {
-    return null
+    // DB unavailable, fall through to static
   }
+  // Fallback to static posts
+  return staticPosts.find((p) => p.slug === slug) ?? null
 }
 
 function renderContent(content: string) {
-  // Simple markdown-like renderer
   const lines = content.split('\n')
   const elements: React.ReactNode[] = []
   let i = 0
@@ -27,11 +30,11 @@ function renderContent(content: string) {
     const line = lines[i]
 
     if (line.startsWith('# ')) {
-      elements.push(<h2 key={i} className="text-3xl font-headline font-extrabold text-primary-container mt-10 mb-4">{line.slice(2)}</h2>)
+      elements.push(<h2 key={i} className="text-2xl sm:text-3xl font-headline font-extrabold text-primary-container mt-10 mb-4">{line.slice(2)}</h2>)
     } else if (line.startsWith('## ')) {
-      elements.push(<h3 key={i} className="text-2xl font-headline font-bold text-primary-container mt-8 mb-3">{line.slice(3)}</h3>)
+      elements.push(<h3 key={i} className="text-xl sm:text-2xl font-headline font-bold text-primary-container mt-8 mb-3">{line.slice(3)}</h3>)
     } else if (line.startsWith('### ')) {
-      elements.push(<h4 key={i} className="text-xl font-headline font-bold text-on-surface mt-6 mb-2">{line.slice(4)}</h4>)
+      elements.push(<h4 key={i} className="text-lg sm:text-xl font-headline font-bold text-on-surface mt-6 mb-2">{line.slice(4)}</h4>)
     } else if (line.startsWith('- ') || line.startsWith('* ')) {
       const listItems: string[] = []
       while (i < lines.length && (lines[i].startsWith('- ') || lines[i].startsWith('* '))) {
@@ -45,7 +48,7 @@ function renderContent(content: string) {
       )
       continue
     } else if (line === '') {
-      // skip blank lines (paragraph breaks handled by spacing)
+      // skip blank lines
     } else {
       elements.push(
         <p key={i} className="text-on-surface-variant leading-relaxed my-4" dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
@@ -73,7 +76,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       {/* Cover */}
       {post.cover_image && (
-        <div className="w-full h-72 md:h-[420px] overflow-hidden">
+        <div className="w-full h-52 sm:h-72 md:h-[420px] overflow-hidden">
           <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
         </div>
       )}
@@ -99,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
           {/* Excerpt */}
           {post.excerpt && (
-            <p className="text-xl text-on-surface-variant leading-relaxed mb-10 pb-10 border-b border-outline-variant/20">
+            <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed mb-10 pb-10 border-b border-outline-variant/20">
               {post.excerpt}
             </p>
           )}

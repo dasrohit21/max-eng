@@ -112,22 +112,63 @@ export default function AboutPage() {
                   <span className="text-xs font-bold font-label uppercase tracking-tighter text-on-surface-variant">Projects Completed</span>
                 </div>
               </div>
+
+              {/* Team & Site Work */}
+              <div className="mt-10 pt-8 border-t border-outline-variant/20">
+                <h3 className="text-xl font-headline font-bold text-primary-container mb-4">Our Team at Work</h3>
+                <p className="text-on-surface-variant leading-relaxed mb-6">
+                  Our dedicated team of skilled engineers, technicians, and supervisors work across industrial sites throughout India — from blast furnaces and sinter plants to power stations and instrumentation systems. Every project is backed by hands-on expertise and a commitment to zero-accident operations.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <img
+                    src="/Gallery/PHOTO-2025-02-03-09-55-30.jpg"
+                    alt="Max Engineering team group photo"
+                    className="w-full h-48 object-cover rounded-xl shadow-md"
+                  />
+                  <img
+                    src="/Gallery/1000032940.jpg"
+                    alt="Team working at industrial site"
+                    className="w-full h-48 object-cover rounded-xl shadow-md"
+                  />
+                  <img
+                    src="/Gallery/1000034747.jpg"
+                    alt="Engineers at work"
+                    className="w-full h-48 object-cover rounded-xl shadow-md"
+                  />
+                </div>
+              </div>
             </div>
 
-            <div className="md:col-span-4 bg-primary-container text-on-primary p-8 rounded-xl flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center mb-6">
-                <span className="material-symbols-outlined text-primary-container text-4xl">engineering</span>
+            <div className="md:col-span-4 flex flex-col gap-6">
+              {/* Rajkumar Das */}
+              <div className="bg-primary-container text-on-primary p-6 sm:p-8 rounded-xl flex flex-col items-center text-center">
+                <img
+                  src="/Rajkumar Das.jpg"
+                  alt="Rajkumar Das"
+                  className="w-28 h-28 rounded-full object-cover border-4 border-secondary-container mb-4 shadow-lg"
+                />
+                <h3 className="text-xl font-headline font-bold">Rajkumar Das</h3>
+                <p className="text-secondary-fixed-dim font-medium text-sm mb-2">Founder & Proprietor</p>
+                <p className="text-on-primary-container text-xs opacity-80 mb-3">+91 9431755791</p>
+                <p className="text-on-primary-container text-xs leading-relaxed opacity-80">
+                  With over 20 years of experience in industrial instrumentation, Rajkumar Das founded Max Engineering in 2005. His deep expertise in process automation, control systems, and electrical instrumentation has driven the company to become a trusted partner for 19+ major industrial clients across India.
+                </p>
               </div>
-              <h3 className="text-2xl font-headline font-bold">Rajkumar Das</h3>
-              <p className="text-secondary-fixed-dim font-medium mb-2">Proprietor</p>
-              <p className="text-on-primary-container text-sm opacity-80 mb-4">9431755791</p>
-              <div className="border-t border-white/20 pt-4 w-full">
-                <h4 className="font-bold text-sm mb-1">Subhash Sharma</h4>
-                <p className="text-on-primary-container text-sm opacity-80">9431163433</p>
+
+              {/* Subhash Sharma */}
+              <div className="bg-primary-container text-on-primary p-6 sm:p-8 rounded-xl flex flex-col items-center text-center">
+                <img
+                  src="/Subhash Sharma.jpg"
+                  alt="Subhash Sharma"
+                  className="w-28 h-28 rounded-full object-cover border-4 border-secondary-container mb-4 shadow-lg"
+                />
+                <h3 className="text-xl font-headline font-bold">Subhash Sharma</h3>
+                <p className="text-secondary-fixed-dim font-medium text-sm mb-2">Co-Founder & Operations Head</p>
+                <p className="text-on-primary-container text-xs opacity-80 mb-3">+91 9431163433</p>
+                <p className="text-on-primary-container text-xs leading-relaxed opacity-80">
+                  Subhash Sharma brings extensive hands-on experience in electrical erection and commissioning. He oversees project execution and site operations, ensuring every installation meets the highest quality and safety standards across all Max Engineering project sites.
+                </p>
               </div>
-              <p className="text-on-primary-container text-xs leading-relaxed italic mt-4 opacity-80">
-                &quot;Continuous endeavors to deliver expert, innovative value-added technical services placing highest priority on excellence, efficiency and effectiveness.&quot;
-              </p>
             </div>
           </div>
         </div>
