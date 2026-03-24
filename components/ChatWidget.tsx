@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -15,6 +16,7 @@ const SUGGESTIONS = [
 ]
 
 export default function ChatWidget() {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
@@ -22,6 +24,9 @@ export default function ChatWidget() {
   const [showSuggestions, setShowSuggestions] = useState(true)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // Hide on admin pages
+  if (pathname?.startsWith('/admin')) return null
 
   useEffect(() => {
     if (open) {
