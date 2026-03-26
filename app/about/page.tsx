@@ -140,21 +140,6 @@ export default function AboutPage() {
             </div>
 
             <div className="md:col-span-4 flex flex-col gap-6">
-              {/* Rajkumar Das */}
-              <div className="bg-primary-container text-on-primary p-6 sm:p-8 rounded-xl flex flex-col items-center text-center">
-                <img
-                  src="/Rajkumar Das.jpg"
-                  alt="Rajkumar Das"
-                  className="w-28 h-28 rounded-full object-cover border-4 border-secondary-container mb-4 shadow-lg"
-                />
-                <h3 className="text-xl font-headline font-bold">Rajkumar Das</h3>
-                <p className="text-secondary-fixed-dim font-medium text-sm mb-2">Founder & Proprietor</p>
-                <p className="text-on-primary-container text-xs opacity-80 mb-3">+91 9431755791</p>
-                <p className="text-on-primary-container text-xs leading-relaxed opacity-80">
-                  With over 20 years of experience in industrial instrumentation, Rajkumar Das founded Max Engineering in 2005. His deep expertise in process automation, control systems, and electrical instrumentation has driven the company to become a trusted partner for 19+ major industrial clients across India.
-                </p>
-              </div>
-
               {/* Subhash Sharma */}
               <div className="bg-primary-container text-on-primary p-6 sm:p-8 rounded-xl flex flex-col items-center text-center">
                 <img
@@ -163,10 +148,25 @@ export default function AboutPage() {
                   className="w-28 h-28 rounded-full object-cover border-4 border-secondary-container mb-4 shadow-lg"
                 />
                 <h3 className="text-xl font-headline font-bold">Subhash Sharma</h3>
-                <p className="text-secondary-fixed-dim font-medium text-sm mb-2">Co-Founder & Operations Head</p>
+                <p className="text-secondary-fixed-dim font-medium text-sm mb-2">Founder & Proprietor</p>
                 <p className="text-on-primary-container text-xs opacity-80 mb-3">+91 9431163433</p>
                 <p className="text-on-primary-container text-xs leading-relaxed opacity-80">
                   Subhash Sharma brings extensive hands-on experience in electrical erection and commissioning. He oversees project execution and site operations, ensuring every installation meets the highest quality and safety standards across all Max Engineering project sites.
+                </p>
+              </div>
+
+              {/* Rajkumar Das */}
+              <div className="bg-primary-container text-on-primary p-6 sm:p-8 rounded-xl flex flex-col items-center text-center">
+                <img
+                  src="/Rajkumar Das.jpg"
+                  alt="Rajkumar Das"
+                  className="w-28 h-28 rounded-full object-cover border-4 border-secondary-container mb-4 shadow-lg"
+                />
+                <h3 className="text-xl font-headline font-bold">Rajkumar Das</h3>
+                <p className="text-secondary-fixed-dim font-medium text-sm mb-2">Co-Founder & Operations Head</p>
+                <p className="text-on-primary-container text-xs opacity-80 mb-3">+91 9431755791</p>
+                <p className="text-on-primary-container text-xs leading-relaxed opacity-80">
+                  With over 20 years of experience in industrial instrumentation, Rajkumar Das founded Max Engineering in 2005. His deep expertise in process automation, control systems, and electrical instrumentation has driven the company to become a trusted partner for 19+ major industrial clients across India.
                 </p>
               </div>
             </div>
@@ -255,28 +255,43 @@ export default function AboutPage() {
       </section>
 
       {/* Organizational Structure */}
-      <section className="py-12 sm:py-24 px-4 sm:px-8 bg-surface">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-4xl font-headline font-extrabold text-primary-container mb-8 sm:mb-12">Organizational Structure</h2>
-          <div className="flex flex-col items-center gap-2">
+      <section className="py-12 sm:py-24 px-4 sm:px-8 machined-gradient">
+        <div className="max-w-5xl mx-auto text-center">
+          <span className="text-secondary-container font-label uppercase tracking-[0.2em] text-sm font-bold block mb-4">How We Operate</span>
+          <h2 className="text-2xl sm:text-4xl font-headline font-extrabold text-white mb-10 sm:mb-16">Organizational Structure</h2>
+          <div className="flex flex-col items-center gap-0">
             {[
-              ['Proprietor'],
-              ['HR & AC Department'],
-              ['Managers', 'Project Coordinator'],
-              ['Project Incharge'],
-              ['Quality Incharge', 'Safety Incharge'],
-              ['Site Supervisor'],
-              ['Highly Skilled'],
-              ['Semi-Skilled', 'Skilled'],
+              { roles: ['Proprietor'], icon: 'person', level: 'top' },
+              { roles: ['HR & AC Department'], icon: 'groups', level: 'mid' },
+              { roles: ['Managers', 'Project Coordinator'], icon: 'manage_accounts', level: 'mid' },
+              { roles: ['Project Incharge'], icon: 'engineering', level: 'mid' },
+              { roles: ['Quality Incharge', 'Safety Incharge'], icon: 'verified_user', level: 'mid' },
+              { roles: ['Site Supervisor'], icon: 'supervisor_account', level: 'mid' },
+              { roles: ['Highly Skilled'], icon: 'construction', level: 'base' },
+              { roles: ['Semi-Skilled', 'Skilled'], icon: 'handyman', level: 'base' },
             ].map((row, i) => (
               <div key={i} className="flex flex-col items-center w-full">
-                {i > 0 && <div className="w-px h-6 bg-green-400" />}
-                <div className={`flex gap-4 justify-center ${row.length > 1 ? 'w-full max-w-md' : ''}`}>
-                  {row.map((label) => (
+                {i > 0 && (
+                  <div className="flex flex-col items-center">
+                    <div className="w-px h-5 bg-secondary-container/50" />
+                    <span className="material-symbols-outlined text-secondary-container text-base">keyboard_arrow_down</span>
+                  </div>
+                )}
+                <div className={`flex gap-3 sm:gap-4 justify-center ${row.roles.length > 1 ? 'w-full max-w-lg' : ''}`}>
+                  {row.roles.map((label) => (
                     <div
                       key={label}
-                      className="bg-green-600 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md flex-1 max-w-[160px] sm:max-w-[200px] text-center"
+                      className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-bold text-xs sm:text-sm shadow-lg flex-1 max-w-[180px] sm:max-w-[220px] text-center transition-all hover:scale-105 ${
+                        row.level === 'top'
+                          ? 'bg-secondary-container text-primary-container shadow-amber-500/20'
+                          : row.level === 'base'
+                          ? 'bg-white/10 text-white border border-white/20 backdrop-blur-sm'
+                          : 'bg-white/5 text-white border border-white/10 backdrop-blur-sm'
+                      }`}
                     >
+                      <span className={`material-symbols-outlined text-base hidden sm:inline ${
+                        row.level === 'top' ? 'text-primary-container' : 'text-secondary-container'
+                      }`}>{row.icon}</span>
                       {label}
                     </div>
                   ))}

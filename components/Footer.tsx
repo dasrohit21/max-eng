@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="flex items-start gap-4">
             <span className="material-symbols-outlined text-amber-500 text-xl mt-1">location_on</span>
             <span className="text-slate-400 text-sm leading-relaxed font-body">
-              Bank Colony, Road No. 1, Manjhi Tola, Adityapur-13, Jamshedpur, JH
+              Bank Colony, Road No. 1, Manjhi Tola, Adityapur-1, Jamshedpur, JH
             </span>
           </div>
           <div className="flex items-start gap-4">

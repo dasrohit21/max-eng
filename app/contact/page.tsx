@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-headline font-bold text-primary-container text-xl mb-2">Our Office</h3>
                   <p className="text-on-surface-variant">
-                    Bank Colony, Road No. 1, Manjhi Tola,<br />Adityapur-13, Jamshedpur, Jharkhand
+                    Bank Colony, Road No. 1, Manjhi Tola,<br />Adityapur-1, Jamshedpur, Jharkhand
                   </p>
                 </div>
               </div>
