@@ -1,10 +1,9 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingContact from '@/components/FloatingContact'
+import { createMetadata, pageSeo } from '@/lib/seo'
 
-export const metadata = {
-  title: 'About Max Engineering | Instrumentation Solution for Industrial Excellence',
-}
+export const metadata = createMetadata(pageSeo.about)
 
 const clients = [
   { name: 'Industrial Sales & Service', location: 'Jamshedpur, JH', work: 'E&C of Instrumentation System (MBF) — M/s Tayo Rolls Ltd.' },

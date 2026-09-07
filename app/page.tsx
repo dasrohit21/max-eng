@@ -2,6 +2,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingContact from '@/components/FloatingContact'
 import Link from 'next/link'
+import { createMetadata, pageSeo } from '@/lib/seo'
+
+export const metadata = createMetadata(pageSeo.home)
 
 export default function HomePage() {
   return (
@@ -15,8 +18,8 @@ export default function HomePage() {
             Industrial Excellence
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight mb-6 sm:mb-8 tracking-tighter">
-            Reliable Electrical &amp; <br className="hidden sm:block" />
-            <span className="text-secondary-container">Instrumentation</span> Excellence
+            Industrial Electrical &amp; <br className="hidden sm:block" />
+            <span className="text-secondary-container">Instrumentation</span> Services in Jamshedpur
           </h1>
           <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
             High-precision engineering services for complex industrial environments. We deliver
@@ -184,9 +187,9 @@ export default function HomePage() {
                     <span className="material-symbols-outlined">{item.icon}</span>
                   </div>
                   <div>
-                    <h4 className="text-lg font-headline font-bold text-primary-container mb-1">
+                    <h3 className="text-lg font-headline font-bold text-primary-container mb-1">
                       {item.title}
-                    </h4>
+                    </h3>
                     <p className="text-on-surface-variant">{item.desc}</p>
                   </div>
                 </div>
@@ -202,7 +205,7 @@ export default function HomePage() {
               />
               <div className="flex flex-col gap-4">
                 <div className="bg-secondary-container p-8 rounded-xl flex flex-col justify-center text-primary-container">
-                  <h4 className="text-3xl font-headline font-black mb-1">24/7</h4>
+                  <p className="text-3xl font-headline font-black mb-1">24/7</p>
                   <p className="font-bold uppercase text-xs">Emergency Support</p>
                 </div>
                 <img

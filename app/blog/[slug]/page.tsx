@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import FloatingContact from '@/components/FloatingContact'
 import pool from '@/lib/db'
 import { staticPosts } from '@/lib/blog-data'
+import { createMetadata } from '@/lib/seo'
 
 async function getPost(slug: string) {
   // Try database first
@@ -19,6 +20,26 @@ async function getPost(slug: string) {
   }
   // Fallback to static posts
   return staticPosts.find((p) => p.slug === slug) ?? null
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = await getPost(params.slug)
+
+  if (!post) {
+    return createMetadata({
+      title: 'Blog Post Not Found | Max Engineering',
+      description: 'The requested Max Engineering blog post could not be found.',
+      path: `/blog/${params.slug}`,
+    })
+  }
+
+  return createMetadata({
+    title: `${post.title} | Max Engineering`,
+    description: post.excerpt || `Read ${post.title} from Max Engineering.`,
+    path: `/blog/${post.slug}`,
+    image: post.cover_image || '/logo.png',
+    type: 'article',
+  })
 }
 
 function renderContent(content: string) {

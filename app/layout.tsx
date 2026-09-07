@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
 import './globals.css'
 import ChatWidget from '@/components/ChatWidget'
+import { canonicalUrl, createMetadata, pageSeo, siteUrl } from '@/lib/seo'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -16,9 +17,31 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Max Engineering | Reliable Electrical & Instrumentation Solutions',
+  metadataBase: new URL(siteUrl),
+  ...createMetadata(pageSeo.home),
+}
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'LocalBusiness'],
+  '@id': `${siteUrl}/#organization`,
+  name: 'Max Engineering',
+  url: canonicalUrl('/'),
+  logo: canonicalUrl('/logo.png'),
   description:
-    'High-precision engineering services for complex industrial environments. Electrical and Instrumentation solutions.',
+    'Industrial electrical, instrumentation, process automation, calibration, erection, and commissioning services based in Jamshedpur.',
+  foundingDate: '2005',
+  email: 'max.engg2016@gmail.com',
+  telephone: ['+91 9431755791', '+91 9431163433'],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Bank Colony, Road No. 1, Manjhi Tola, Adityapur-1',
+    addressLocality: 'Jamshedpur',
+    addressRegion: 'Jharkhand',
+    addressCountry: 'IN',
+  },
+  areaServed: 'India',
+  sameAs: [siteUrl],
 }
 
 export default function RootLayout({
@@ -37,6 +60,10 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${inter.variable} bg-surface text-on-background font-body`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
         {children}
         <ChatWidget />
       </body>

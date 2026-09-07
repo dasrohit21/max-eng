@@ -4,6 +4,9 @@ import Footer from '@/components/Footer'
 import FloatingContact from '@/components/FloatingContact'
 import pool from '@/lib/db'
 import { staticPosts } from '@/lib/blog-data'
+import { createMetadata, pageSeo } from '@/lib/seo'
+
+export const metadata = createMetadata(pageSeo.blog)
 
 async function getPosts() {
   try {

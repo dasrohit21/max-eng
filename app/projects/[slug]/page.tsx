@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingContact from '@/components/FloatingContact'
 import Link from 'next/link'
+import { createMetadata } from '@/lib/seo'
 
 const projectData: Record<
   string,
@@ -97,6 +98,25 @@ export function generateStaticParams() {
   return Object.keys(projectData).map((slug) => ({ slug }))
 }
 
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const project = projectData[params.slug]
+
+  if (!project) {
+    return createMetadata({
+      title: 'Project Not Found | Max Engineering',
+      description: 'The requested Max Engineering project case study could not be found.',
+      path: `/projects/${params.slug}`,
+    })
+  }
+
+  return createMetadata({
+    title: `${project.title} | Max Engineering`,
+    description: `${project.category} project case study in ${project.location}: ${project.overview}`,
+    path: `/projects/${params.slug}`,
+    image: project.img,
+  })
+}
+
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
   const project = projectData[params.slug]
 
@@ -171,10 +191,10 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             <section className="bg-surface-container-low rounded-xl p-5 sm:p-8 md:p-12 space-y-8">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-headline font-bold text-primary-container flex items-center gap-2">
+                  <h2 className="text-xl font-headline font-bold text-primary-container flex items-center gap-2">
                     <span className="material-symbols-outlined text-error">warning</span>
                     Challenges
-                  </h3>
+                  </h2>
                   <ul className="space-y-3 text-on-surface-variant">
                     {project.challenges.map((c) => (
                       <li key={c} className="flex gap-3">
@@ -184,10 +204,10 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-headline font-bold text-primary-container flex items-center gap-2">
+                  <h2 className="text-xl font-headline font-bold text-primary-container flex items-center gap-2">
                     <span className="material-symbols-outlined text-secondary">build</span>
                     Solutions
-                  </h3>
+                  </h2>
                   <ul className="space-y-3 text-on-surface-variant">
                     {project.solutions.map((s) => (
                       <li key={s} className="flex gap-3">
@@ -230,10 +250,10 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     backgroundSize: '20px 20px',
                   }}
                 />
-                <h3 className="text-xl font-headline font-bold mb-8 flex items-center gap-3">
+                <h2 className="text-xl font-headline font-bold mb-8 flex items-center gap-3">
                   <span className="material-symbols-outlined text-secondary-container">analytics</span>
                   Project Specs
-                </h3>
+                </h2>
                 <div className="space-y-6 relative z-10">
                   <div>
                     <label className="text-[10px] uppercase tracking-[0.2em] text-on-primary-container font-bold">Client Name</label>
